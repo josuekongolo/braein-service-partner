@@ -1,0 +1,539 @@
+/* ========================================
+   BRÆIN SERVICE PARTNER - Responsive Styles
+   Mobile First Approach
+   ======================================== */
+
+/* ========================================
+   Large Desktop (1200px+)
+   ======================================== */
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 var(--space-xl);
+    }
+
+    .hero__content {
+        max-width: 800px;
+    }
+
+    .footer__grid {
+        grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    }
+}
+
+/* ========================================
+   Desktop (1024px - 1199px)
+   ======================================== */
+
+@media (max-width: 1199px) {
+    :root {
+        --text-4xl: 2.25rem;
+        --text-3xl: 1.75rem;
+    }
+
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-2xl);
+    }
+
+    .footer__brand {
+        max-width: 100%;
+    }
+}
+
+/* ========================================
+   Tablet (768px - 1023px)
+   ======================================== */
+
+@media (max-width: 1023px) {
+    :root {
+        --space-4xl: 4rem;
+        --space-3xl: 3rem;
+    }
+
+    /* Navigation */
+    .nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-white);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: var(--space-2xl);
+        transform: translateX(100%);
+        transition: transform var(--transition-base);
+        z-index: 999;
+    }
+
+    .nav.active {
+        transform: translateX(0);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+    }
+
+    .nav__link {
+        display: block;
+        padding: var(--space-lg) 0;
+        border-bottom: 1px solid var(--color-border);
+        font-size: var(--text-lg);
+    }
+
+    .nav__cta {
+        margin-left: 0;
+        margin-top: var(--space-xl);
+        width: 100%;
+    }
+
+    .nav__cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .nav-toggle__bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active .nav-toggle__bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .nav-toggle__bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Quick Contact */
+    .quick-contact {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 80vh;
+        margin-top: 70px;
+    }
+
+    .hero__features {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    /* Service Area */
+    .service-area {
+        grid-template-columns: 1fr;
+    }
+
+    .service-area__map {
+        order: -1;
+        height: 300px;
+    }
+
+    /* Service Details */
+    .service-detail__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .service-detail:nth-child(even) .service-detail__inner {
+        direction: ltr;
+    }
+
+    .service-detail__image {
+        order: -1;
+    }
+
+    /* About Intro */
+    .about-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .about-intro__image {
+        order: -1;
+    }
+
+    /* Coverage Section */
+    .coverage-section {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Grid */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        order: 1;
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+}
+
+/* ========================================
+   Mobile Large (576px - 767px)
+   ======================================== */
+
+@media (max-width: 767px) {
+    :root {
+        --text-4xl: 2rem;
+        --text-3xl: 1.5rem;
+        --text-2xl: 1.25rem;
+        --space-4xl: 3rem;
+        --space-3xl: 2rem;
+    }
+
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+
+    /* Header */
+    .header__inner {
+        padding: var(--space-md);
+    }
+
+    .header__logo-text {
+        font-size: var(--text-lg);
+    }
+
+    .header__logo-tagline {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: var(--space-3xl) 0;
+    }
+
+    .hero__content {
+        padding: var(--space-2xl) 0;
+    }
+
+    .hero__badge {
+        font-size: var(--text-xs);
+    }
+
+    .hero__subtitle {
+        font-size: var(--text-base);
+    }
+
+    .hero__actions {
+        flex-direction: column;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Service Area List */
+    .service-area__list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Form */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .footer__legal {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: var(--space-3xl) 0 var(--space-2xl);
+    }
+
+    /* Pricing Card */
+    .pricing-card {
+        padding: var(--space-lg);
+    }
+
+    /* Contact Form */
+    .contact-form-wrapper {
+        padding: var(--space-lg);
+    }
+
+    .contact-info {
+        padding: var(--space-lg);
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: var(--space-3xl) 0;
+    }
+
+    .cta-section__actions {
+        flex-direction: column;
+    }
+
+    .cta-section__actions .btn {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   Mobile Small (up to 575px)
+   ======================================== */
+
+@media (max-width: 575px) {
+    :root {
+        --text-4xl: 1.75rem;
+        --text-3xl: 1.375rem;
+        --text-2xl: 1.125rem;
+        --text-xl: 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: var(--space-sm) var(--space-md);
+        font-size: var(--text-sm);
+    }
+
+    .btn--lg {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--text-base);
+    }
+
+    /* Hero */
+    .hero__title {
+        font-size: 1.5rem;
+    }
+
+    /* Service Cards */
+    .service-card {
+        padding: var(--space-lg);
+    }
+
+    .service-card__icon {
+        width: 50px;
+        height: 50px;
+        font-size: var(--text-xl);
+    }
+
+    /* Feature Items */
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-item__icon {
+        margin: 0 auto;
+    }
+
+    /* Section Headers */
+    .section-header {
+        margin-bottom: var(--space-2xl);
+    }
+
+    /* Value Cards */
+    .value-card {
+        padding: var(--space-lg);
+    }
+
+    .value-card__icon {
+        width: 60px;
+        height: 60px;
+        font-size: var(--text-xl);
+    }
+
+    /* Project Cards */
+    .project-card__image {
+        height: 200px;
+    }
+
+    .project-card__content {
+        padding: var(--space-md);
+    }
+
+    /* Contact Info */
+    .contact-info__item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info__icon {
+        margin: 0 auto;
+    }
+
+    /* Service Detail */
+    .service-detail__image img {
+        height: 250px;
+    }
+
+    /* About Intro */
+    .about-intro__image img {
+        height: 300px;
+    }
+
+    /* Map */
+    .service-area__map,
+    .contact-map {
+        height: 250px;
+    }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+
+@media print {
+    .header,
+    .footer,
+    .nav,
+    .quick-contact,
+    .cta-section,
+    .btn {
+        display: none !important;
+    }
+
+    .hero {
+        min-height: auto;
+        margin-top: 0;
+        padding: var(--space-xl) 0;
+    }
+
+    .section {
+        padding: var(--space-xl) 0;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-text);
+    }
+
+    .service-card,
+    .project-card,
+    .value-card {
+        box-shadow: none;
+        border: 1px solid var(--color-border);
+    }
+}
+
+/* ========================================
+   Accessibility & Reduced Motion
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --color-border: #000000;
+        --color-text-light: #333333;
+        --color-text-muted: #444444;
+    }
+
+    .btn--primary {
+        border: 2px solid var(--color-primary);
+    }
+
+    .service-card,
+    .project-card,
+    .value-card {
+        border: 2px solid var(--color-primary);
+    }
+}
+
+/* ========================================
+   Touch Device Optimizations
+   ======================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects on touch devices */
+    .btn:hover {
+        transform: none;
+    }
+
+    .service-card:hover,
+    .project-card:hover,
+    .value-card:hover {
+        transform: none;
+    }
+
+    .nav__link::after {
+        display: none;
+    }
+
+    /* Larger touch targets */
+    .nav__link {
+        padding: var(--space-md) 0;
+    }
+
+    .form-checkbox input {
+        width: 24px;
+        height: 24px;
+    }
+}
